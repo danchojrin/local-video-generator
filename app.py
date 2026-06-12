@@ -11,16 +11,16 @@ import config_manager as cm
 
 # ─── Página ───────────────────────────────────────────────────────────────────
 
-st.set_page_config(page_title="Video Generator — Protocolo Vital",
+st.set_page_config(page_title="Local Video Generator",
                    page_icon="🎬", layout="wide")
 
 # ─── Presets de color ─────────────────────────────────────────────────────────
 
 PRESETS = {
-    "Protocolo Vital": {"bg":"#042C53","accent":"#00C2A8","white":"#E6F1FB","muted":"#8A9BB0","grid":"#083A64","blue":"#378ADD"},
+    "Medianoche":      {"bg":"#0A0A0F","accent":"#6C63FF","white":"#E8E8FF","muted":"#7A7A9A","grid":"#12121A","blue":"#4A90D9"},
     "Oscuro puro":     {"bg":"#080808","accent":"#FFFFFF","white":"#FFFFFF","muted":"#666666","grid":"#141414","blue":"#AAAAAA"},
     "Urgencias":       {"bg":"#0D0505","accent":"#D73232","white":"#F5F0F0","muted":"#8A7070","grid":"#1A0A0A","blue":"#C05050"},
-    "Anet Diner":      {"bg":"#262320","accent":"#5C2D2D","white":"#F4F1EC","muted":"#8A7D72","grid":"#302C28","blue":"#3D2020"},
+    "Bosque":          {"bg":"#0D1A0F","accent":"#4CAF7D","white":"#E8F5EC","muted":"#7A9A82","grid":"#132018","blue":"#2E86AB"},
     "Cyberpunk":       {"bg":"#0D0221","accent":"#00FF9F","white":"#E0F0FF","muted":"#5A6A8A","grid":"#130330","blue":"#0080FF"},
     "Personalizado":   None,
 }
@@ -86,9 +86,9 @@ with st.sidebar:
     # ── Estética ─────────────────────────────────────────────────────────────
     st.subheader("🎨 Estética")
     preset_name = st.selectbox("Preset", list(PRESETS.keys()),
-                               index=list(PRESETS.keys()).index(loaded.get("preset_name","Protocolo Vital")))
+                               index=list(PRESETS.keys()).index(loaded.get("preset_name","Medianoche") if loaded.get("preset_name","Medianoche") in PRESETS else "Medianoche"))
     preset      = PRESETS[preset_name]
-    defaults    = preset or PRESETS["Protocolo Vital"]
+    defaults    = preset or PRESETS["Medianoche"]
 
     edit_colors = st.checkbox("Editar colores manualmente", value=bool(loaded.get("edit_colors", preset_name=="Personalizado")))
     if edit_colors:
