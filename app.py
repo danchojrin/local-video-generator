@@ -187,10 +187,10 @@ with st.sidebar:
 
     with st.expander("✦ Intro + Outro"):
         feat_intro_outro = st.toggle("Añadir intro/outro", value=bool(loaded.get("feat_intro_outro", False)), key="fio")
-        brand_name  = st.text_input("Nombre de marca (intro)", value=loaded.get("brand_name","PROTOCOLO VITAL"))
+        brand_name  = st.text_input("Nombre de marca (intro)", value=loaded.get("brand_name","TU MARCA"))
         brand_sub   = st.text_input("Subtítulo (intro)", value=loaded.get("brand_sub","Dan Chojrin"))
         outro_cta   = st.text_input("CTA (outro)", value=loaded.get("outro_cta","Sígueme"))
-        outro_handle= st.text_input("Handle (outro)", value=loaded.get("outro_handle","@protocolo_vital"))
+        outro_handle= st.text_input("Handle (outro)", value=loaded.get("outro_handle","@tu_handle"))
         outro_sub   = st.text_input("Frase cierre", value=loaded.get("outro_sub","El cambio empieza aquí."))
 
     with st.expander("✦ Subtítulos automáticos (Whisper)"):
@@ -496,3 +496,6 @@ with tab_configs:
                 if c3.button("Cargar", key=f"load_{cfg_entry['stem']}", use_container_width=True):
                     st.session_state["loaded_cfg"] = cm.load_config(cfg_entry["stem"])
                     st.rerun()
+
+st.divider()
+st.caption("Hecho por [Dan Chojrin](https://github.com/danchojrin/local-video-generator)")
