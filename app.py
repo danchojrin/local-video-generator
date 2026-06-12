@@ -188,7 +188,7 @@ with st.sidebar:
     with st.expander("✦ Intro + Outro"):
         feat_intro_outro = st.toggle("Añadir intro/outro", value=bool(loaded.get("feat_intro_outro", False)), key="fio")
         brand_name  = st.text_input("Nombre de marca (intro)", value=loaded.get("brand_name","TU MARCA"))
-        brand_sub   = st.text_input("Subtítulo (intro)", value=loaded.get("brand_sub","Dan Chojrin"))
+        brand_sub   = st.text_input("Subtítulo (intro)", value=loaded.get("brand_sub","Tu nombre"))
         outro_cta   = st.text_input("CTA (outro)", value=loaded.get("outro_cta","Sígueme"))
         outro_handle= st.text_input("Handle (outro)", value=loaded.get("outro_handle","@tu_handle"))
         outro_sub   = st.text_input("Frase cierre", value=loaded.get("outro_sub","El cambio empieza aquí."))
