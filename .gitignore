@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Output files
+output_linkedin/
+*.mp4
+*.aiff
+*.mp3
+*.wav
+*.png
+
+# Claude / editor
+.claude/
+
+# Configs saved locally (stored in ~/.pv_videogen, not here)
+*.json
