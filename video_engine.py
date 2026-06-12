@@ -764,8 +764,8 @@ def render_intro_frame(frame_idx: int) -> None:
     bar_a = _ease(min(lt * 5, 1.0)) * master_a
     draw.rectangle([(margin, yc - 30), (margin + int(160 * bar_a), yc - 22)], fill=_dim(accent, bar_a))
 
-    brand = cfg.get("brand_name", "PROTOCOLO VITAL")
-    sub   = cfg.get("brand_sub",  "Dan Chojrin")
+    brand = cfg.get("brand_name", "TU MARCA")
+    sub   = cfg.get("brand_sub",  "Tu nombre")
 
     if cfg.get("feat_glow"):
         img  = _make_glow(img, brand, (margin, yc), f_big, accent)
@@ -801,7 +801,7 @@ def render_outro_frame(frame_idx: int) -> None:
     yc     = H // 2 - int(H * 0.08)
 
     cta    = cfg.get("outro_cta",    "Sígueme")
-    handle = cfg.get("outro_handle", "@protocolo_vital")
+    handle = cfg.get("outro_handle", "@tu_handle")
 
     if cfg.get("feat_glow"):
         img  = _make_glow(img, cta, (margin, yc), f_big, accent)
