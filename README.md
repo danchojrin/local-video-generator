@@ -95,7 +95,7 @@ Se abrirá automáticamente en tu navegador en `http://localhost:8501`.
 
 ## 📁 ¿Dónde se guardan los vídeos?
 
-Los vídeos generados se guardan en la carpeta `output_linkedin/` dentro del proyecto.
+Los vídeos se descargan directamente desde el navegador al terminar la generación — tú eliges dónde guardarlos.
 Las configuraciones guardadas se almacenan en `~/.pv_videogen/` (tu carpeta de usuario, no en el repositorio).
 
 ---
